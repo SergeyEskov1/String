@@ -5,6 +5,7 @@ public class Main
         Scanner scn = new Scanner(System.in);
         String exp = scn.nextLine();
         exp = exp.replace("\"", "");
+        exp = exp.replace(" ", "");
         String[] data;
         char action;
 
@@ -87,19 +88,17 @@ public class Main
 
     public static void printInQuote(String text)
     {
-        String result = trimString(text,10);
+        String result = trimString(text,40);
         System.out.println("\""+result+"\"");
     }
 
-    public static String trimString(String text, int count)
-    {
+    public static String trimString(String text, int count) {
         String result = text;
-        if(result.length() >= count)
-        {
-            result = result.substring(0,count - 1);
+        if (result.length() >= count) {
+            result = result.substring(0, count - 1);
             result += "...";
         }
         return result;
+
     }
 }
- 
