@@ -88,7 +88,7 @@ public class Main
 
     public static void printInQuote(String text)
     {
-        String result = trimString(text,40);
+        String result = trimString(text,41);
         System.out.println("\""+result+"\"");
     }
 
