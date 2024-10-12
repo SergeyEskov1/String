@@ -8,20 +8,19 @@ public class Main
 
         String exp = scn.nextLine();
         exp = exp.replace("\"", "");
-        exp = exp.replace(" ", "");
         String[] data;
         char action;
         if (exp.contains("+")) {
-            data = exp.split("\\+");
+            data = exp.split(" \\+ ");
             action = '+';
         } else if (exp.contains("-")) {
-            data = exp.split("-");
+            data = exp.split( " - ");
             action = '-';
         } else if (exp.contains("*")) {
-            data = exp.split("\\*");
+            data = exp.split(" \\* ");
             action = '*';
         } else if (exp.contains("/")) {
-            data = exp.split("/");
+            data = exp.split(" / ");
             action = '/';
         } else {
             throw new Exception("Некорректный знак дейстивия");
