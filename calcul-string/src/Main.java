@@ -37,7 +37,7 @@ public class Main
         {
             int numeric = Integer.parseInt(data[1]);
             if(isNumericIsOutOfBounds(numeric))
-                throw new Exception("Второй аргумент должен быть не более 10");
+                throw new Exception("Второй аргумент должен быть от 0 до  10");
         }
         else
         {
@@ -135,7 +135,8 @@ public class Main
 
     public static boolean isNumericIsOutOfBounds(int input)
     {
-        return input > 10;
+        return (input < 1 || input > 10);
+
     }
 
     public static boolean isStringIsOutOfBounds(String input)
